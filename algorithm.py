@@ -16,7 +16,7 @@ class RMMSegmentor:
                 self.dictionary.append(line.strip().split()[0])
 
     def rmm(self, line: str) -> list[str]:
-        chars = list(line)
+        chars = list(line.strip())
         words = []
         while chars:
             if len(chars) < self.max_word_len:
